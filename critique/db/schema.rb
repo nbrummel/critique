@@ -11,16 +11,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150130050730) do
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+ActiveRecord::Schema.define(version: 20150130050340) do
+>>>>>>> 735e5ed6f51abe8b59543bcd501963902e283150
 
   create_table "reviews", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.float    "rating"
+=======
+=======
+>>>>>>> project-model
+ActiveRecord::Schema.define(version: 20150130044516) do
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "name"
+    t.string   "type"
+    t.string   "location"
+    t.text     "description"
+    t.integer  "user_id"
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+=======
+>>>>>>> project-model
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+  add_index "reviews", ["project_id"], name: "index_reviews_on_project_id"
+  add_index "reviews", ["user_id"], name: "index_reviews_on_user_id"
+=======
+  add_index "projects", ["user_id"], name: "index_projects_on_user_id"
+>>>>>>> Stashed changes
+=======
+  add_index "projects", ["user_id"], name: "index_projects_on_user_id"
+>>>>>>> project-model
+
+>>>>>>> 735e5ed6f51abe8b59543bcd501963902e283150
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
