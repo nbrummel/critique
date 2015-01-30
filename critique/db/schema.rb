@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< Updated upstream
 ActiveRecord::Schema.define(version: 20150130050340) do
 
   create_table "reviews", force: :cascade do |t|
@@ -19,12 +20,26 @@ ActiveRecord::Schema.define(version: 20150130050340) do
     t.integer  "project_id"
     t.text     "description"
     t.float    "rating"
+=======
+ActiveRecord::Schema.define(version: 20150130044516) do
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "name"
+    t.string   "type"
+    t.string   "location"
+    t.text     "description"
+    t.integer  "user_id"
+>>>>>>> Stashed changes
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
+<<<<<<< Updated upstream
   add_index "reviews", ["project_id"], name: "index_reviews_on_project_id"
   add_index "reviews", ["user_id"], name: "index_reviews_on_user_id"
+=======
+  add_index "projects", ["user_id"], name: "index_projects_on_user_id"
+>>>>>>> Stashed changes
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
