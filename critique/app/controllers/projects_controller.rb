@@ -23,14 +23,14 @@ class ProjectsController < ApplicationController
    end
 
   def edit
-    @project = project.find(params[:name])
+    @project = Project.find(params[:name])
   end
 
   def update
   end
 
-  def delete
-    project.find(params[:id]).destroy
+  def destroy
+    Project.find(params[:id]).destroy
     redirect_to :action => 'list'
   end
 
