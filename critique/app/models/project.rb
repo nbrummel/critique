@@ -3,7 +3,7 @@ class Project < ActiveRecord::Base
 
   validates(:name, presence: true, length: { maximum: 100, minimum: 5 })
 
-  validates(:type, presence: true, length: { maximum: 25,  minimum: 3 })
+  validates(:category, presence: true, length: { maximum: 25,  minimum: 3 })
 
   validates(:location,    length: { maximum: 50 },   allow_blank: true)
 

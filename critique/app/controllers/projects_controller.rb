@@ -16,7 +16,7 @@ class ProjectsController < ApplicationController
 	  @project = Project.new(project_params)
     if @project.save
       flash[:success] = "New project created"
-	    redirect_to :action => 'list'
+	    redirect_to @project
     else
       render 'new'
     end
@@ -36,6 +36,6 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:name, :type, :location, :description)
+    params.require(:project).permit(:name, :category, :location, :description)
   end
 end

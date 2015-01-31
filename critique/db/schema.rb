@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20150130050730) do
 
   create_table "projects", force: :cascade do |t|
     t.string   "name"
-    t.string   "type"
+    t.string   "category"
     t.string   "location"
     t.text     "description"
     t.integer  "user_id"
