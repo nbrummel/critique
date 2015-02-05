@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   get 'users/index'
 
+=======
+>>>>>>> c8c7373596edd1bf8d9ee9c1ac4fd8263133ed44
   get 'users/create'
 
   get 'users/update'
 
+<<<<<<< HEAD
   get 'users/destroy'
 
   get 'users/search'
@@ -14,6 +18,17 @@ Rails.application.routes.draw do
   get 'users/sign_out' => 'users#index'
 
   devise_for :users 
+=======
+  get 'users/edit'
+
+  get 'users/search'
+
+  get 'users/destroy'
+
+  get 'users/dashboard'
+
+  devise_for :users
+>>>>>>> c8c7373596edd1bf8d9ee9c1ac4fd8263133ed44
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
