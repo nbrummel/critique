@@ -7,7 +7,7 @@
 		<li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
 		<li><%= link_to 'Profile', '#' %></li>
 	<% end %>
-	<li><%= link_to 'Help', 'help' %></li>
-	<li><%= link_to 'FAQ', 'faq' %></li>
-	<li><%= link_to 'Terms & Conditions', 't_and_c' %></li>
+	<li><%= link_to 'Help', static_pages_help_path %></li>
+	<li><%= link_to 'FAQ', static_pages_faq_path %></li>
+	<li><%= link_to 'Terms & Conditions', static_pages_t_and_c_path %></li>
 </ul>

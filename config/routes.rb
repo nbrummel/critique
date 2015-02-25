@@ -1,24 +1,8 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
+
   resources :projects
-=======
-<<<<<<< HEAD:config/routes.rb
-  get 'users/index'
 
-  get 'users/create'
 
-  get 'users/update'
-
-  get 'users/destroy'
-
-  get 'users/search'
-
-  get 'users/dashboard'
-
-  get 'users/sign_out' => 'users#index'
-
-  devise_for :users 
-=======
   root 'static_pages#home'
 
   get 'static_pages/help'
@@ -29,19 +13,11 @@ Rails.application.routes.draw do
 
   resources :projects
   resources :reviews
->>>>>>> EdmundLeex-master
+
 
   devise_for :users
->>>>>>> 4aa119c61a67c72e9011982abcfe4c0626cf5bde:config/routes.rb
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
-<<<<<<< HEAD:config/routes.rb
-  root to: 'users#index'
-=======
->>>>>>> 4aa119c61a67c72e9011982abcfe4c0626cf5bde:config/routes.rb
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
