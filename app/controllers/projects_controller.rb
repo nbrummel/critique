@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   def index
-	  @projects = project.find(:all)
+	  @projects = Project.find(:all)
     #TODO: use pagination gem
   end
 

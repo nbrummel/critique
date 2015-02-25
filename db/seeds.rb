@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+projects = Project.create([{:id => 1, :name =>'Critique', :type => 'application', location: '' , :description => '' },{:id => 2, :name =>'Staffolution', :type => 'application', :location => '' , :description => ''  }])
+
+# users = User.create(email: 'my@email.com', password: '123').save(validate: false)
+
+
