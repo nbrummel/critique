@@ -4,7 +4,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.string :location
-      t.string :type
+      t.string :category
 
       t.timestamps null: false
     end
