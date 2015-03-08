@@ -24,7 +24,6 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.json
   def create
-    debugger
     @project = current_user.projects.build(project_params)
 
     respond_to do |format|
