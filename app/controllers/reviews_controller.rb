@@ -24,6 +24,7 @@ class ReviewsController < ApplicationController
   # POST /reviews
   # POST /reviews.json
   def create
+    @project = Project.find(params(:project_id))
     @review = Review.new(review_params)
 
     respond_to do |format|
