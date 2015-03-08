@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :projects
+
   root 'static_pages#home'
 
   get 'static_pages/help'
@@ -6,8 +8,6 @@ Rails.application.routes.draw do
   get 'static_pages/faq'
 
   get 'static_pages/t_and_c'
-
-  resources :projects
   resources :reviews
 
   devise_for :users

@@ -6,7 +6,8 @@ RSpec.describe "projects/show", :type => :view do
       :name => "Name",
       :description => "MyText",
       :location => "Location",
-      :type => "Type"
+      :category => "Category",
+      :user_id => 1
     ))
   end
 
@@ -15,6 +16,7 @@ RSpec.describe "projects/show", :type => :view do
     expect(rendered).to match(/Name/)
     expect(rendered).to match(/MyText/)
     expect(rendered).to match(/Location/)
-    expect(rendered).to match(/Type/)
+    expect(rendered).to match(/Category/)
+    expect(rendered).to match(/1/)
   end
 end

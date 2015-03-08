@@ -6,7 +6,8 @@ RSpec.describe "projects/new", :type => :view do
       :name => "MyString",
       :description => "MyText",
       :location => "MyString",
-      :type => ""
+      :category => "MyString",
+      :user_id => 1
     ))
   end
 
@@ -21,7 +22,9 @@ RSpec.describe "projects/new", :type => :view do
 
       assert_select "input#project_location[name=?]", "project[location]"
 
-      assert_select "input#project_type[name=?]", "project[type]"
+      assert_select "input#project_category[name=?]", "project[category]"
+
+      assert_select "input#project_user_id[name=?]", "project[user_id]"
     end
   end
 end

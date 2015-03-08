@@ -6,7 +6,8 @@
       %th Name
       %th Description
       %th Location
-      %th Type
+      %th Category
+      %th User
       %th
       %th
       %th
@@ -17,7 +18,8 @@
         %td= project.name
         %td= project.description
         %td= project.location
-        %td= project.type
+        %td= project.category
+        %td= project.user_id
         %td= link_to 'Show', project
         %td= link_to 'Edit', edit_project_path(project)
         %td= link_to 'Destroy', project, :method => :delete, :data => { :confirm => 'Are you sure?' }

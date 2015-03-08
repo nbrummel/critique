@@ -7,13 +7,15 @@ RSpec.describe "projects/index", :type => :view do
         :name => "Name",
         :description => "MyText",
         :location => "Location",
-        :type => "Type"
+        :category => "Category",
+        :user_id => 1
       ),
       Project.create!(
         :name => "Name",
         :description => "MyText",
         :location => "Location",
-        :type => "Type"
+        :category => "Category",
+        :user_id => 1
       )
     ])
   end
@@ -23,6 +25,7 @@ RSpec.describe "projects/index", :type => :view do
     assert_select "tr>td", :text => "Name".to_s, :count => 2
     assert_select "tr>td", :text => "MyText".to_s, :count => 2
     assert_select "tr>td", :text => "Location".to_s, :count => 2
-    assert_select "tr>td", :text => "Type".to_s, :count => 2
+    assert_select "tr>td", :text => "Category".to_s, :count => 2
+    assert_select "tr>td", :text => 1.to_s, :count => 2
   end
 end
