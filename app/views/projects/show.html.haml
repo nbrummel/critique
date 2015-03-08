@@ -19,3 +19,12 @@
 = link_to 'Edit', edit_project_path(@project)
 \|
 = link_to 'Back', projects_path
+
+= form_for [@project, Review.new] do |f|
+  = f.label :title
+  = f.text_field :title
+  = f.label :comment
+  = f.text_area :comment
+  = f.label :rating
+  = f.text_field :rating
+  = f.submit
