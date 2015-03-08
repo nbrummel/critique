@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :projects
 
   root 'static_pages#home'
 
@@ -8,7 +7,10 @@ Rails.application.routes.draw do
   get 'static_pages/faq'
 
   get 'static_pages/t_and_c'
-  resources :reviews
+  
+  resources :projects do
+    resources :reviews
+  end
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
