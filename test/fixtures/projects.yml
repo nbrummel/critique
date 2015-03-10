@@ -1,4 +1,4 @@
-<% 10.times do |n| %>
+<% 15.times do |n| %>
 project_<%= n %>:
   name: <%= Faker::Lorem.words(rand(2..4)).join(' ') %>
   description: <%= Faker::Lorem.paragraph %>
