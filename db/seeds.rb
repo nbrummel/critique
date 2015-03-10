@@ -16,7 +16,7 @@ end
 # seed projects
 users = User.order(:created_at).take(6)
 10.times do
-	name = Faker::Lorem.words(rand(2..4))
+	name = Faker::Lorem.words(rand(2..4)).join(' ')
 	description = Faker::Lorem.paragraph
 	location = Faker::Address.city + ', ' + Faker::Address.state
 	category = Faker::Lorem.word
