@@ -8,9 +8,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/t_and_c'
   
-  resources :projects do
-    resources :reviews
-  end
+  resources :projects
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
