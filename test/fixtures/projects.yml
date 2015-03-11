@@ -1,5 +1,14 @@
-<% 15.times do |n| %>
+<% 10.times do |n| %>
 project_<%= n %>:
+  name: <%= Faker::Lorem.words(rand(5..6)).join(' ') %>
+  description: <%= Faker::Lorem.sentence(5) %>
+  location: Los Angeles, CA
+  category: coding
+  user: calvin
+<% end %>
+
+<% 15.times do |n| %>
+project_<%= n + 10 %>:
   name: <%= Faker::Lorem.words(rand(2..4)).join(' ') %>
   description: <%= Faker::Lorem.paragraph %>
   location: Los Angeles, CA

@@ -34,22 +34,28 @@ class ProjectInterfaceTest < ActionDispatch::IntegrationTest
     post user_session_path user: { email: @edmund.email, password: 'password' }
     get projects_path
     assert_template 'projects/index'
+    assert_select 'div.pagination'
     projects = @edmund.projects.take(10)
     projects.each do |project|
       assert_match project.name,        response.body
       assert_match project.description, response.body
     end
-    assert_select 'div.pagination'
     # log in as another user with no projects
     delete destroy_user_session_path
     get new_user_session_path
     post user_session_path user: { email: @calvin.email, password: 'password' }
-    # should not show any project
+    # should not show any project from edmund
     get projects_path
     assert_select 'div.pagination', count: 0
     projects.each do |project|
       assert_no_match project.name,        response.body
       assert_no_match project.description, response.body
+    end
+    # but should show his own projects
+    projects = @calvin.projects
+    projects.each do |project|
+      assert_match project.name,        response.body
+      assert_match project.description, response.body
     end
   end
 end
